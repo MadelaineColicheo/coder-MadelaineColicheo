@@ -11,4 +11,6 @@ def mostrar_datos(request):
      'title': 'Fábrica de masas y empanadas'}
      return render(request, "core/datos.html", context)
 
-     
+def ver_notas(request):
+     notas = [ 6, 7, 8, 9]  
+     return render(request, "core/datos.html", {"notas": notas})
