@@ -1,4 +1,4 @@
-# coder-MadelaineColicheo
+# Coder-MadelaineColicheo
 # Curso Python
 
 ## Comisión
