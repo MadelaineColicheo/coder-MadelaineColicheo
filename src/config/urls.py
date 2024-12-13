@@ -21,10 +21,9 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("saludar/", views.saludar, name="saludar"),
-    path("saludar-con-etiqueta", views.saludar_con_etiqueta, name="saludarEtiqueta"),
-    path("saludar-con-nombre/<str:nombre>/", views.saludar_con_nombre, name="saludarNombre"),
     path("", views.index, name="index"),
+    path("Categoria/", views.categorias, name="settings"),
+
 
 
 ]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías y Productos</title>
+</head>
+<body>
+    <h1>Categorías y Productos</h1>
+    
+    {% for categoria in categorias %}
+        <h2>{{ categoria.nombre }}</h2>
+        <p>{{ categoria.descripcion }}</p>
+
+        <h3>Productos:</h3>
+        <ul>
+            {% for producto in categoria.productos.all %}
+                <li>
+                    <strong>{{ producto.nombre }}</strong><br>
+                    Descripción: {{ producto.descripcion }}<br>
+                    Precio: ${{ producto.precio }}<br>
+                    Disponibilidad: {% if producto.disponibilidad %} Disponible {% else %} No disponible {% endif %}
+                </li>
+            {% empty %}
+                <li>No hay productos en esta categoría.</li>
+            {% endfor %}
+        </ul>
+    {% empty %}
+        <p>No hay categorías disponibles.</p>
+    {% endfor %}
+</body>
+</html>
