@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabrica de masas Camila</title>
-</head>
-<body>
+{% extends 'core/base.html' %}
+
+{% block content %}
+
     <h1>Fabrica de masa para empanadas</h1>
-    <a href="categoria_productos.html"">Listados de productos</a>
-    <a href="">listado de ingredientes</a>
+    <h2>Categorías de productos</h2>
+
+    <a href="{% url 'productos:categorias_productos' %}"><button>Categorías de Productos</button></a>
+    <a href="{% url 'productos:categorias_productos' %}"><button>Productos</button></a>
+
     <footer> Hecho en el año {{año}} </footer>
-</body>
-</html>
+{% endblock content %}

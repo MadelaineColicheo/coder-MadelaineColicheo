@@ -19,10 +19,9 @@ from django.urls import path, include
 from core import views
 from django.conf import settings
 from django.conf.urls.static import static
-from producto.views import categoria_productos_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.index, name="index"),
-    path('categorias/', categoria_productos_view, name='categorias_productos'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  
+    path('productos/', include('productos.urls'))
+]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
