@@ -16,7 +16,6 @@ Nombre: Madelaine Colicheo
 Linkedin:
 
 ## Entrega
-## Trabajo Práctico N°3: 
 Modelo de Base de Datos para una Fábrica de Masas y Empanadas
 
 1. Tabla: Productos
@@ -46,9 +45,6 @@ Campo	Tipo de Dato	Descripción
 id_ingrediente	INT (PK, AUTO_INCREMENT)	Identificador único del ingrediente
 nombre	VARCHAR(100)	Nombre del ingrediente (Ej. carne de res, cebolla)
 descripcion	TEXT	Descripción del ingrediente
-
-##-------------------------------------------------------
-
 
 4. Tabla: Producto_Ingredientes
 Una tabla de relación entre productos e ingredientes, ya que un producto puede tener varios ingredientes y un ingrediente puede estar presente en varios productos.
