@@ -11,4 +11,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "djlint>=1.36.3",
+    "ipython>=8.31.0",
 ]
